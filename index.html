@@ -21,15 +21,18 @@
 <body class="container-fluid">
     <h2 class="fw-bold mt-5 mb-3">Task Manager</h2>
     <div>
-        <input type="text" placeholder="Enter a task..." class="form-control w-25 m-auto mb-2" id="textbox">
+        <input type="text" placeholder="Enter a task..." class="form-control w-25 m-auto mb-2" id="textbox" name="textInput">
         <button class="btn text-white" style="background-color:#28a745;" id="btn" onclick="addTask()">Add task</button>
     </div>
 
     <script type="text/javascript">
-        let task=document.getElementById(textbox).value;
 
         function addTask(){
-            console.log(task);
+            let task = textbox.value;
+            let para=document.createElement("p");
+            para.textContent=task;
+            para.style.backgroundColor="skyblue"
+            document.body.appendChild(para);
         }
     </script>
 
