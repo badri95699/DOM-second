@@ -41,12 +41,13 @@
             document.body.appendChild(para);
 
 
-            let newbtn=document.createElement("button");
+            var newbtn=document.createElement("button");
             newbtn.textContent="Delete"
             document.body.appendChild(newbtn);
             newbtn.className="btn btn-danger";
             newbtn.addEventListener("click",function(){
                 para.style.display="none";
+                newtbtn.style.display="none";
             })
         }
     </script>
