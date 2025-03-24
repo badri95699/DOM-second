@@ -22,7 +22,7 @@
     <h2 class="fw-bold mt-5 mb-3">Task Manager</h2>
     <div>
         <input type="text" placeholder="Enter a task..." class="form-control w-25 m-auto mb-2" id="textbox" name="textInput">
-        <button class="btn text-white" style="background-color:#28a745;" id="btn" onclick="addTask()">Add task</button>
+        <button class="btn text-white m-3" style="background-color:#28a745;" id="btn" onclick="addTask()">Add task</button>
     </div>
 
     <script type="text/javascript">
@@ -32,7 +32,17 @@
             let para=document.createElement("p");
             para.textContent=task;
             para.style.backgroundColor="skyblue"
+            para.style.width="12%";
+            para.style.padding="5px";
+            para.style.margin="auto";
+            para.style.marginBottom="10px";
+            para.style.marginTop="10px";
+            para.style.borderRadius="10px"
             document.body.appendChild(para);
+            let newbtn=document.createElement("button");
+            newbtn.textContent="Delete"
+            document.body.appendChild(newbtn);
+            newbtn.className="btn btn-danger";
         }
     </script>
 
